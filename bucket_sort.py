@@ -1,7 +1,7 @@
 import random
 import cal_time
-n=100
-ls = list(range(100000))
+n=10
+ls = list(range(1000))
 random.shuffle(ls)
 
 @cal_time.run_time
