@@ -1,22 +1,21 @@
 import random
 import cal_time
 
-ls = list(range(100))
+ls = list(range(0, 100000))
 random.shuffle(ls)
 
+
+@cal_time.run_time
 def radix_sort(ls):
-    bucket=[[] for i in range(10)]
-    l=len(str(ls))
+    l = len(str(max(ls)))
     for m in range(l):
+        bucket = [[] for i in range(10)]
         for val in ls:
-            i=val//(10**m)%10
-            print(i)
-    #         bucket[i].append(val)
-    #         j = len(bucket[i]) - 1
-    #         while j - 1 >= 0 and bucket[i][j - 1] > val:
-    #             bucket[i][j] = bucket[i][j - 1]
-    #             j -= 1
-    #         bucket[i][j] = val
-    # print(bucket)
+            i = (val // (10 ** m)) % 10
+            bucket[i].append(val)
+        ls.clear()
+        for i in bucket:
+            for j in i:
+                ls.append(j)
 
 radix_sort(ls)
