@@ -8,10 +8,14 @@ random.shuffle(ls)
 def insert_sort(ls):
     for i in range(1,len(ls)):
         tmp=ls[i]
-        for j in range(i+1):
-            if tmp<ls[j]:
-                ls.insert(j,ls.pop(i))
-                break
+        while i-1>=0 and ls[i-1]>tmp:
+            ls[i]=ls[i-1]
+            i-=1
+        ls[i]=tmp
+
 
 
 insert_sort(ls)
+
+
+

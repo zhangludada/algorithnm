@@ -1,7 +1,7 @@
 import random
 import cal_time
 
-ls=list(range(10000))
+ls=list(range(100000))
 random.shuffle(ls)
 
 def sift(ls,low,height):
