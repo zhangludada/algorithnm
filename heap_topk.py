@@ -1,5 +1,5 @@
 import random
-
+import cal_time
 ls = list(range(1000))
 random.shuffle(ls)
 
@@ -21,6 +21,7 @@ def sift(ls, low, height):
     ls[i] = tmp
 
 
+@cal_time.run_time
 def topk_sort(ls, k):
     heap = ls[0:k]
     n = len(heap)
@@ -40,4 +41,3 @@ def topk_sort(ls, k):
 
 
 a = topk_sort(ls, 10)
-print(a)

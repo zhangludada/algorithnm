@@ -1,5 +1,5 @@
 import random
-from algorithmn.cal_time import *
+import cal_time
 
 ls = list(range(10000))
 random.shuffle(ls)
@@ -24,7 +24,7 @@ def quick_sort(ls, left, right):
         quick_sort(ls, mid + 1, right)
 
 
-@run_time
+@cal_time.run_time
 def main():
     quick_sort(ls, 0, len(ls) - 1)
 
