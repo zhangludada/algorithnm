@@ -1,7 +1,7 @@
 import random
 import cal_time
 
-ls = list(range(100000))
+ls = list(range(1000000))
 random.shuffle(ls)
 
 
