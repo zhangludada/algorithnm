@@ -6,6 +6,6 @@ def run_time(func):
         start = time.time()
         func(*args)
         end = time.time()
-        print(round(end - start, 4))
+        print(round(end - start,6))
 
     return tmp

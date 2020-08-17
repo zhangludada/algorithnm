@@ -1,8 +1,8 @@
 import random
 import cal_time
-ls = list(range(1000))
-random.shuffle(ls)
 
+ls = list(range(10000))
+random.shuffle(ls)
 
 # 小根堆
 def sift(ls, low, height):
